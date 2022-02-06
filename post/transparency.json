@@ -1,5 +1,8 @@
 {
     "targets": [
+        "combine",
+        "crystal",
+        "swap",
         "water",
         "translucent",
         "itemEntity",
@@ -61,8 +64,24 @@
             ]
         },
         {
-            "name": "blit",
+            "name": "crystal",
+            "intarget": "minecraft:end_crystal",
+            "outtarget": "combine"
+        },
+        {
+            "name": "util/combine",
             "intarget": "final",
+            "auxtargets":[
+                {
+                    "name": "CombineSampler",
+                    "id": "combine"
+                }
+            ]
+            "outtarget": "swap"
+        },
+        {
+            "name": "blit",
+            "intarget": "swap",
             "outtarget": "minecraft:main"
         }
     ]
